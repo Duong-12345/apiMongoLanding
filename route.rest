@@ -1,0 +1,41 @@
+GET http://localhost:3001/api
+###
+
+GET http://localhost:3001/api/province
+
+### 
+GET http://localhost:3001/api/district
+
+### 
+GET http://localhost:3001/api/school
+
+### 
+GET http://localhost:3000/api/622b2815bb11533f324cc87b
+
+###
+POST  http://localhost:3001/api
+Content-Type: application/json
+
+{
+    "date": "2022-03-22T12:00:00+07:00",
+    "departmentCodes": ["4"],
+    "districtCode": 10,
+    "email": "mtduong5299@gmail.com",
+    "name": "Mạc Tùng Dương",
+    "numberOfParticipant": 1,
+    "phone": "0378914557",
+    "programCodes": ["11", "10", "9"],
+    "provinceCode": 62,
+    "schoolCode": 63,
+    "time": "9:00 - 10:00",
+    "type": "tour_offline"
+}
+
+###
+
+DELETE  http://localhost:3000/api/622e9cf23bd6a59c650f142c
+
+###
+PATCH   http://localhost:3000/api/622eaafb5c8dda7b1d4d3c97
+Content-Type: application/json
+
