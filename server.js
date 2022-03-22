@@ -16,5 +16,5 @@ db.once('open',()=> console.log('Db connected'))
 const api = require('./routes/api')
 app.use(bodyParser.json())
 app.use('/api', api)
-const PORT = process.env.PORT || 3001
+let PORT = process.env.PORT || 3001
 app.listen(PORT,()=> console.log('Server Started'))
