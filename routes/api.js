@@ -48,6 +48,26 @@ router.get('/school', async (req, res) =>{
     res.status(500).json({message:err.message})
   }
 })
+//GETTING DEPARTMENT
+router.get('/department', async (req, res) =>{
+  try{
+    const department = await db.collection('department').find({}).toArray()
+    res.json(department);
+  }
+  catch(err){
+    res.status(500).json({message:err.message})
+  }
+})
+//GETTING PROGRAM
+router.get('/program', async (req, res) =>{
+  try{
+    const program = await db.collection('program').find({}).toArray()
+    res.json(program);
+  }
+  catch(err){
+    res.status(500).json({message:err.message})
+  }
+})
 
 //GETTING ONE
 router.get("/:id", getPerson, (req, res)=>{
