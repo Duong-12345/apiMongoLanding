@@ -44,5 +44,5 @@ app.use('/api', api)
 //     }
 //     res.sendFile(path.join(buildDir, 'index.html'));
 // });
-let PORT = process.env.PORT || 3001
-app.listen(PORT,()=> console.log('Server Started'))
+let PORT = process.env.PORT || 8002
+app.listen(PORT,()=> console.log('Server Started' ,PORT))
