@@ -1,12 +1,12 @@
-require('dotenv').config()
+// require('dotenv').config()
 const express = require('express')
 var bodyParser = require('body-parser')
 
 const cors = require('cors')
 const app = express()
 const mongoose = require('mongoose')
-// const connnecttionURL = 'mongodb+srv://duong0502:duong123@cluster0.xkad9.mongodb.net/organizationStructure?retryWrites=true&w=majority'
-mongoose.connect(process.env.DATABASE_URL,{useNewUrlParser: true})
+const connnecttionURL = 'mongodb+srv://duong0502:duong123@cluster0.xkad9.mongodb.net/organizationStructure?retryWrites=true&w=majority'
+mongoose.connect(connnecttionURL,{useNewUrlParser: true})
 app.use(cors())
 const db = mongoose.connection
 // console.log(db)
@@ -44,5 +44,5 @@ app.use('/api', api)
 //     }
 //     res.sendFile(path.join(buildDir, 'index.html'));
 // });
-let PORT = process.env.PORT || 8002
+let PORT = process.env.PORT || 8000
 app.listen(PORT,()=> console.log('Server Started' ,PORT))
